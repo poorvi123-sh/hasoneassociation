@@ -1,0 +1,9 @@
+<h1>Add New Post</h1>
+<%= form_for @post do |f|%>
+<%= f.label 'Description'%>
+<%= f.text_field :description%>
+<br><br>
+<%= f.hidden_field :user_id,value: @user.id%>
+<br><br>
+<%= f.submit%>
+	<%end%>

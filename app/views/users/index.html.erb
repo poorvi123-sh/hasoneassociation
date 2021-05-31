@@ -1,0 +1,14 @@
+<table border="5px" cellpadding="5px" cellspacing="5px">
+	<tr>
+		<td>Name</td>
+		<td>Age</td>
+		<td>Posts</td>
+	</tr>
+	<tr>
+		<% @users.each do |u|%>
+		<td><%= u.age%></td>
+		<td><%= u.name%></td>
+		<td><%= link_to "Posts",posts_path(user_id:u.id)%></td>
+	</tr>
+	<%end%>
+</table>
